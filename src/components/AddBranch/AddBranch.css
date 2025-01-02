@@ -1,0 +1,68 @@
+.add-branch-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+.addBranch-container{
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 80%;
+    padding: 12px;
+    background-color: aliceblue;
+}
+
+.add-input-container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.add-input{
+    border: 1px solid #ccc; 
+    border-radius: 8px;
+    padding: 10px;
+    margin: 5px;
+    outline: none;
+}
+
+.add-bank-btn{
+    border: none;
+    background-color: rgb(155, 93, 247);
+    outline: none;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+.add-btn-container{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.add-submit-btn{
+    border: 2px solid rgb(2, 137, 255);
+    background-color: white;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.close-btn{
+    border: none;
+    background-color: rgb(15, 87, 150);
+    outline: none;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    color: white;
+    margin: 10px;
+}
+
+.add-input:focus{
+    border: 1px solid rgb(15, 104, 181);
+    box-shadow: 0px 0px 12px rgb(26, 125, 213);
+}
