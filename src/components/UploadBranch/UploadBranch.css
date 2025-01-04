@@ -1,0 +1,41 @@
+.upload-container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: antiquewhite;
+}
+
+.upload-branch-container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upload-head{
+    font-size: 22px;
+    font-weight: 500;  
+}
+
+.branch-upload{
+    margin-bottom: 15px;
+}
+
+.upload-grid{
+    width: 80%;
+}
+
+.upload-file{
+    margin-bottom: 20px;
+}
+
+.btn-upload{
+    padding: 10px 20px;
+    background-color: #0baedc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+}

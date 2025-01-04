@@ -13,55 +13,55 @@ import { AiOutlineStop } from "react-icons/ai";
 const Home = () => {
   const homeBranchData = [
     {
-      id:1,
+      id: 1,
       count: 0,
       status: "coupon Requested",
       bgColor: "#1ba1e2",
       icon: IoDocumentTextOutline,
     },
     {
-      id:2,
+      id: 2,
       count: 0,
       status: "coupon Approved",
       bgColor: "#f09609",
       icon: LuFileCheck,
     },
     {
-      id:3,
+      id: 3,
       count: 0,
       status: "coupon Generated",
       bgColor: "#89c4ff",
       icon: BsFuelPump,
     },
     {
-      id:4,
+      id: 4,
       count: 0,
       status: "coupon Utillized",
       bgColor: "#004589",
-      icon:IoAirplaneOutline,
+      icon: IoAirplaneOutline,
     },
     {
-      id:5,
+      id: 5,
       count: 0,
       status: "coupon inProgress",
       bgColor: "#00cfd4",
-      icon:MdOutlineAccessTime,
+      icon: MdOutlineAccessTime,
     },
     {
-      id:6,
+      id: 6,
       count: 0,
       status: "coupon canceled",
       bgColor: "#c3cb6e",
-      icon:AiOutlineStop,
+      icon: AiOutlineStop,
     },
     {
-      id:7,
+      id: 7,
       count: 0,
       status: "vehicles",
       bgColor: "#7acec2",
-      icon:FiTruck,
+      icon: FiTruck,
     },
-  
+
   ];
 
   return (
@@ -71,20 +71,20 @@ const Home = () => {
         <div className='home-branch-inputs'>
           <div className='branch-input'>
             <label htmlFor='branch'>Branch</label>
-              <select className='home-select' id='branch'>
-                <option>All</option>
-                <option>SPL-CORP</option>
-                <option>CHENNAI</option>
-              </select> 
+            <select className='home-select' id='branch'>
+              <option>All</option>
+              <option>SPL-CORP</option>
+              <option>CHENNAI</option>
+            </select>
           </div>
           <div className='home-branch-date-inputs'>
             <div className='branch-input'>
               <label htmlFor='fromDate'>From Date</label>
-              <input type='date' className='home-select' id='fromDate'/>
+              <input type='date' className='home-select' id='fromDate' />
             </div>
             <div className='branch-input'>
               <label htmlFor='toDate'>To Date</label>
-              <input type='date' className='home-select' id='toDate'/>
+              <input type='date' className='home-select' id='toDate' />
             </div>
           </div>
         </div>
@@ -92,7 +92,7 @@ const Home = () => {
         <article>
           <ul className='list-home'>
             {homeBranchData.map(branch => (
-              <HomeCard key={branch.id} branchData={branch}  />
+              <HomeCard key={branch.id} branchData={branch} />
             ))}
           </ul>
         </article>

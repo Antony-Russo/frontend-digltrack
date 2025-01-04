@@ -4,6 +4,7 @@ import Login from './components/Login/Login';
 import Home from './components/Home/Home';
 import Branch from './components/Branch/Branch';
 import AddBranch from './components/AddBranch/AddBranch';
+import UploadBranch from './components/UploadBranch/UploadBranch';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route exact path="/" element={<Login/>} />
         <Route path='/addbranch' element={<AddBranch/>} />
         <Route path='/addbranch/:id' element={<AddBranch/>} />
+        <Route path='/uploadExcel' element={<UploadBranch/>} />
       </Routes>
     </BrowserRouter>
   );
