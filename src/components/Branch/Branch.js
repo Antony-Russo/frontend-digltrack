@@ -13,12 +13,14 @@ import Dialog from "@mui/material/Dialog";
 import DialogTitle from "@mui/material/DialogTitle";
 import DialogContent from "@mui/material/DialogContent";
 import DialogActions from "@mui/material/DialogActions";
+import { CircularProgress, Backdrop } from "@mui/material";
 import * as XLSX from "xlsx";
 import { CiSaveDown2 } from "react-icons/ci";
 import "./Branch.css"
 
 const Branch = () => {
   const [branches, setBranches] = useState([]);
+  const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState("");
   const [isFullScreen, setIsFullScreen] = useState(false);
   const [isDialogOpen, setDialogOpen] = useState(false);
@@ -70,12 +72,15 @@ const Branch = () => {
   });
 
   const fetchBranches = async () => {
+    setLoading(true);
     try {
       const response = await axios.get("https://keydraft-backend-1.onrender.com/api/branch/data");
       setBranches(response.data.data || []);
     } catch (error) {
       console.error("Error fetching branches:", error);
       setBranches([]);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -179,8 +184,23 @@ const Branch = () => {
     XLSX.writeFile(workbook, "BranchDetails.xlsx");
   };
 
+  const Loader = ({ open }) => {
+    return (
+      <Backdrop
+        open={open}
+        style={{
+          zIndex: 1201,
+          color: "#fff",
+        }}
+      >
+        <CircularProgress color="inherit" />
+      </Backdrop>
+    );
+  };
+
   return (
     <>
+      <Loader open={loading} />
       <NavBar />
       <div className="branch-main-container">
         <div className={isFullScreen ? "fullscreen-container" : "table-container branch-container"}>
